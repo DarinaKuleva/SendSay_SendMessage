@@ -5,6 +5,7 @@ import { requestMessageStatus } from '../../actions/messageStatus'
 import * as selectors from '../../selectors/sendMessage'
 import { fieldPlaceholders, fieldMaxLength } from '../../constants/messageForm'
 import { getDateNow } from '../../utils/convertDate'
+import { convertFileToBase64 } from '../../utils'
 import InputContainer from './InputContainer'
 import FieldContainer from './FieldContainer'
 import Attachment from './Attachment'
@@ -56,8 +57,21 @@ const MessageForm = (props) => {
     {dropDepth: 0, inDropZone: false, attachments: []}
   )
 
-  React.useEffect(() => {
-    setFieldValue('attachments', data.attachments)
+  const attachFile = async (files) => {
+    const base64File = await convertFileToBase64(files)
+    const newAttachment = {
+      name: files.name,
+      content: base64File,
+      encoding: 'base64',
+      size: files.size
+    }
+    setFieldValue('attachments', [...values?.attachments, newAttachment])
+  }
+
+  React.useEffect( () => {
+    data.attachments.map(attachment => {
+      attachFile(attachment)
+    })
   }, [data.attachments])
 
   React.useEffect(() => {
