@@ -1,6 +1,7 @@
 ## Форма отправки сообщений
 
 ***Запуск проекта***
+
 ``
 npm install
 ``
@@ -9,7 +10,7 @@ npm install
 npm start
 ``
 
-#####Задание
+***Задание***
 
 https://www.notion.so/Frontend-4263b61293224088b7c3f929b761f9e3
 
