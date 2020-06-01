@@ -1,0 +1,111 @@
+.Attachment {
+  display: flex;
+  flex-wrap: wrap;
+  width: 740px;
+  justify-content: space-between;
+
+  &__addContainer {
+    margin-top: 10px;
+  }
+
+  &__button {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-left: 22px;
+    color: #0055FB;
+    position: relative;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid transparent;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 15px;
+      width: 16px;
+      left: -22px;
+      background-image: url("../../../assets/addFile.svg");
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus, &:active {
+      opacity: 1;
+      border: 2px solid #45A5FF;
+      border-radius: 7px;
+    }
+  }
+
+  &__input {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+  }
+
+  &__file {
+    width: 365px;
+    height: 50px;
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__delete {
+    font-size: 16px;
+    line-height: 20px;
+    color: #FF6666;
+    position: relative;
+    margin: 0 0 0 28px;
+    width: 83px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 16px;
+      width: 13px;
+      left: -18px;
+      background-image: url("../../../assets/delete.svg");
+    }
+
+    &:hover, &:after {
+      color: red;
+    }
+  }
+
+  &__name {
+    width: 200px;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0 0 0 60px;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 30px;
+      width: 34px;
+      left: -50px;
+      background-image: url("../../../assets/attachedFile.svg");
+      opacity: 0.6;
+    }
+  }
+
+  &__error {
+    font-size: 16px;
+    line-height: 25px;
+    color: #FF6666;
+  }
+}

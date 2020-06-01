@@ -1,0 +1,18 @@
+.LoadingSendMessage {
+  padding: 80px 22px;
+  color: #000;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+
+  &__desc {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}

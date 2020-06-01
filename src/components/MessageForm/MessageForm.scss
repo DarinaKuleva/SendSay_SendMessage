@@ -1,0 +1,102 @@
+.MessageForm {
+  position: relative;
+
+  &__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  &__field {
+    outline: none;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 40px;
+    width: 740px;
+    padding: 5px 10px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+
+    &::placeholder {
+      opacity: 0.4;
+    }
+
+    &--name {
+      width: 370px;
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &--email {
+      width: 370px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &--message {
+      height: 140px;
+      width: 740px;
+      resize: none;
+    }
+
+    &:hover, &:active {
+      border: 2px solid #45A5FF;
+      outline: none;
+    }
+  }
+
+  &__button {
+    height: 40px;
+    width: 140px;
+    border: none;
+    outline: none;
+    background: linear-gradient(180deg, #45A6FF 0%, #0055FB 100%), #C4C4C4;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 20px;
+
+    &:hover {
+      height: 40px;
+      width: 140px;
+      border: none;
+      border-radius: 5px;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.15),
+        rgba(255, 255, 255, 0.15)),
+        linear-gradient(180deg, #45A6FF 0%, #0055FB 100%), #C4C4C4;
+    }
+
+    &:focus {
+      height: 42px;
+      width: 142px;
+      border: 2px solid #45A5FF;
+      border-radius: 7px;
+    }
+
+    &:active {
+      height: 40px;
+      width: 140px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15)),
+        linear-gradient(180deg, #45A6FF 0%, #0055FB 100%), #C4C4C4;
+      border-radius: 5px;
+    }
+
+    &--disabled {
+      background: linear-gradient(0deg, #C4C4C4, #C4C4C4),
+        linear-gradient(180deg, #45A6FF 0%, #0055FB 100%);
+
+      &:hover, &:focus, &:active {
+        background: linear-gradient(0deg, #C4C4C4, #C4C4C4),
+        linear-gradient(180deg, #45A6FF 0%, #0055FB 100%);
+      }
+    }
+  }
+}

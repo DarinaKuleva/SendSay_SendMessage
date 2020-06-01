@@ -1,0 +1,103 @@
+.MessageHistory {
+  width: 740px;
+  margin: 50px auto;
+
+  &__emptyStatus {
+    margin: 0;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  &__error {
+    margin: 10px 0;
+    color: #FF6666;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  &__loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #0055FB;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin: 0 0 20px 20px;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+    margin: 0 0 20px 0;
+    font-weight: 400;
+  }
+
+  &__table {
+    width: 740px;
+    color: #000;
+    text-align: left;
+    font-size: 16px;
+    line-height: 25px;
+    margin: 0 auto;
+
+    :first-child {
+      width: 100px;
+    }
+
+    :last-child {
+      width: 100px;
+    }
+
+    &--header {
+      font-size: 16px;
+      line-height: 25px;
+      opacity: 0.4;
+
+      :last-child {
+        text-align: right;
+      }
+    }
+
+    &--row {
+      :last-child {
+        text-align: right;
+      }
+    }
+
+    &--column {
+      padding: 7.5px 0;
+      font-weight: 400;
+    }
+
+    &--title {
+      padding: 10px 0;
+      font-weight: 300;
+      border-bottom: 1px solid #bdbdbd;
+    }
+  }
+
+  &__status {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 25px;
+
+    &--error {
+      color: #FF6666;
+    }
+
+    &--pending {
+      opacity: 0.4;
+    }
+
+    &--success {
+      color: #03A100;
+    }
+  }
+}
